@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="./assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+
+    <title>Frontend Mentor | Dictionary web app</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="wrapper">
+    <nav>
+        <img alt="logo" src="./assets/images/logo.svg">
+        <ul class="nav-list">
+            <div class="custom-dropdown">
+                <div class="dropdown-trigger">
+                    <p id="selected-option">Sans Serif</p>
+                    <img alt="" src="./assets/images/icon-arrow-down.svg">
+                </div>
+                <ul class="dropdown-options">
+                    <li class="dropdown-option sans active">Sans Serif</li>
+                    <li class="dropdown-option serif">Serif</li>
+                    <li class="dropdown-option mono">Mono</li>
+                </ul>
+            </div>
+            <li id="vertical-divider"></li>
+            <li class="toggle-switch">
+                <label for="toggle">
+                    <input id="toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <svg height="22" viewBox="0 0 22 22" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"
+                          fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5"/>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="wrapper searchbar">
+    <input id="search-input" placeholder="Search for any word..." type="text">
+    <p id="error-message"></p>
+    <button id="search-btn">
+        <img alt="" src="./assets/images/icon-search.svg">
+    </button>
+</section>
+
+<section class="wrapper" id="results-wrapper"></section>
+
+<section class="not-found-wrapper"></section>
+
+<script src="main.js" type="module"></script>
+</body>
+</html>

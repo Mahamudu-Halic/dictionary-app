@@ -1,0 +1,36 @@
+@use "variables";
+
+body.dark {
+  background: variables.$dark-primaryBg;
+  color: variables.$dark-primaryText;
+
+  .custom-dropdown {
+    color: variables.$dark-primaryText;
+
+    .dropdown-options {
+      background: variables.$dark-primaryBg;
+      box-shadow: 0 0 15px 5px #A445EDBD;
+    }
+  }
+
+  a, input[type="text"] {
+    color: variables.$dark-primaryText;
+  }
+
+  .searchbar {
+    background: variables.$dark-secondaryBg;
+    border-color: variables.$dark-secondaryBg;
+
+    input {
+      color: variables.$dark-primaryText;
+    }
+
+    &:focus-within {
+      border-color: variables.$accentColor;
+    }
+
+    &.error {
+      border-color: variables.$dangerColor;
+    }
+  }
+}

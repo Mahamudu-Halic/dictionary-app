@@ -1,0 +1,86 @@
+@use "variables";
+
+@import url("../assets/fonts/inconsolata/Inconsolata-VariableFont_wdth,wght.ttf");
+@import url("../assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf");
+@import url("../assets/fonts/lora/Lora-VariableFont_wght.ttf");
+@import url("../assets/fonts/lora/Lora-VariableFont_wght.ttf");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+hr {
+  width: 100%;
+  max-width: 700px;
+  background: variables.$light-secondaryBg;
+  border: none;
+  height: 2px;
+}
+
+.inconsolata {
+  font-family: Inconsolata, monospace;
+}
+
+.inter {
+  font-family: Inter, sans-serif;
+}
+
+.serif {
+  font-family: serif;
+}
+
+.sans {
+  font-family: sans-serif;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+body {
+  font-family: Inter, sans-serif;
+  color: variables.$tertiaryColor;
+  background: variables.$light-primaryBg;
+
+  #not-found-message, .synonyms-container, .source, .content, .meaning-paragraph, .title, .pronunciation, input[type="text"], .custom-dropdown {
+    font-size: variables.$heading-xs;
+  }
+
+  .word {
+    font-size: variables.$heading-sm;
+  }
+
+
+  .custom-dropdown {
+    color: variables.$tertiaryColor;
+
+    .dropdown-options {
+      box-shadow: 0 0 10px 10px #12121212;
+      background: variables.$light-primaryBg;
+    }
+  }
+
+
+  a, input[type="text"] {
+    color: variables.$tertiaryColor;
+  }
+
+  .searchbar {
+    background: variables.$light-secondaryBg;
+  }
+}

@@ -1,0 +1,39 @@
+@use "variables";
+
+.custom-dropdown {
+  position: relative;
+  width: 120px;
+  font-weight: bold;
+
+  &.open .dropdown-options {
+    display: flex;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .dropdown-options {
+    list-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    top: 130%;
+    z-index: 10;
+
+    .dropdown-option {
+      cursor: pointer;
+
+      &:hover {
+        color: variables.$accentColor;
+      }
+    }
+  }
+}

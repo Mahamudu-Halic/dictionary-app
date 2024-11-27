@@ -1,0 +1,75 @@
+@use "variables";
+
+.definitions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .definition-item {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$space-sm;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: variables.$space-md;
+      width: 100%;
+      font-style: italic;
+    }
+
+    .meaning-paragraph {
+      color: variables.$secondaryColor;
+      font-weight: lighter;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 5px;
+          height: 5px;
+          background: variables.$accentColor;
+          border-radius: 50%;
+        }
+      }
+
+      .example {
+        color: variables.$secondaryColor;
+        padding-left: 20px;
+      }
+    }
+
+    .synonyms-container {
+      display: flex;
+      align-items: center;
+      gap: variables.$space-sm;
+      flex-wrap: wrap;
+
+
+      p {
+        color: variables.$secondaryColor;
+      }
+
+      .synonyms {
+        display: flex;
+        gap: 2px;
+        color: variables.$accentColor;
+        font-weight: bold;
+      }
+    }
+
+  }
+}

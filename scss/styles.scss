@@ -1,0 +1,103 @@
+@use "variables";
+@use "default";
+@use "dark-mode";
+@use "header";
+@use "custom-dropdown";
+@use "searchbar";
+@use "definitions";
+
+
+body, #results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-md;
+  align-items: center;
+  padding: 20px;
+}
+
+.word-result-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .play-btn {
+    &:hover svg {
+      path{
+        fill: variables.$light-primaryBg;
+      }
+
+      circle {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  .pronunciation {
+    color: variables.$accentColor;
+    margin-top: 10px;
+  }
+
+  img {
+    width: 80%;
+  }
+}
+
+
+
+.source {
+  display: flex;
+  gap: variables.$space-md;
+  align-items: center;
+  flex-wrap: wrap;
+
+  p {
+    text-decoration: underline;
+    color: variables.$secondaryColor;
+  }
+
+  div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+.not-found-wrapper {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$space-md;
+  padding: 20px;
+  text-align: center;
+
+  .emoji {
+    width: variables.$heading-lg;
+  }
+
+  #not-found-message {
+    max-width: 500px;
+    color: variables.$secondaryColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    .word {
+      font-size: variables.$heading-md;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  body {
+    .word {
+      font-size: variables.$heading-lg;
+    }
+  }
+}
